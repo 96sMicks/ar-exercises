@@ -5,3 +5,11 @@ puts "Exercise 2"
 puts "----------"
 
 # Your code goes here ...
+
+# Load the first 2 store and assigned to variables
+@store1 = Store.find_by(id: 1)
+@store2 = Store.find_by(id: 2)
+
+# Changed the name of store
+@store1.name = "Calgary"
+@store1.save
