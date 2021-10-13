@@ -10,3 +10,8 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+print "Store name > "
+@store_name = $stdin.gets.chomp
+
+@new_store = Store.create(name: "#{@store_name}")
+@new_store.errors.messages.each {|key, message| puts "#{key}: #{message[0]}"}
